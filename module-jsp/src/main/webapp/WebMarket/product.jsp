@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="WebMarket.dto.Product" %>
+<%@ page import="WebMarket.dao.ProductRepository" %>
 <jsp:useBean id="productDAO" class="WebMarket.dao.ProductRepository" scope="session"/>
 <html>
 <head>
@@ -15,7 +16,8 @@
 </div>
 <%
     String id = request.getParameter("id");
-    Product product = productDAO.getProductById(id);
+    ProductRepository dao = ProductRepository.getInstance();
+    Product product = dao.getProductById(id);
 %>
 <div class="container">
     <div class="row">
