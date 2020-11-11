@@ -22,6 +22,8 @@ public class Product implements Serializable
     private long unitsInStock;
     // 신상품 or 중고품 or 재생품
     private String condition;
+    // 이미지 파일명
+    private String filename;
 
     public Product()
     {
@@ -118,5 +120,15 @@ public class Product implements Serializable
     public void setCondition(String condition)
     {
         this.condition = condition;
+    }
+
+    public String getFilename()
+    {
+        return filename;
+    }
+
+    public void setFilename(String filename)
+    {
+        this.filename = filename;
     }
 }
